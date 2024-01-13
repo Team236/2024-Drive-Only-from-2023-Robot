@@ -15,8 +15,7 @@ import edu.wpi.first.util.sendable.Sendable;
  */
 public final class Constants {
   public static class ControllerConstants {
-    //public static final int USB_LEFT_STICK = 0;
-    //public static final int USB_RIGHT_STICK = 1;
+
     public static final int USB_AUXCONTROLLER = 1;
     public static final int USB_DRIVECONTROLLER = 0;
     public static class Thrustmaster {
