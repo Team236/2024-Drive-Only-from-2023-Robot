@@ -96,10 +96,10 @@ public final class Constants {
     }
 }
   public static class MotorControllers {
-    public static final int ID_LEFT_FRONT = 35; 
-    public static final int ID_RIGHT_FRONT = 1; 
-    public static final int ID_LEFT_REAR = 34;
-    public static final int ID_RIGHT_REAR = 32;
+    public static final int ID_LEFT_FRONT = 35; //35
+    public static final int ID_RIGHT_FRONT = 59; //1
+    public static final int ID_LEFT_REAR = 58;//34
+    public static final int ID_RIGHT_REAR = 32;//32
     }
 
 
