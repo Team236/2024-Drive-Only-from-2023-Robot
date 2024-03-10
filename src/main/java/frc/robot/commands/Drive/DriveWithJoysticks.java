@@ -5,13 +5,12 @@
 package frc.robot.commands.Drive;
 import frc.robot.subsystems.Drive;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.Constants;
 import edu.wpi.first.wpilibj.XboxController;
 /** An example command that uses an example subsystem. */
 public class DriveWithJoysticks extends Command {
   private Drive drive;
   private XboxController xboxController;
-  private Boolean isDeadzone = Constants.DriveConstants.IS_DEADZONE;
+  //private Boolean isDeadzone = Constants.DriveConstants.IS_DEADZONE;
 
   /**
    * Creates a new ExampleCommand.
@@ -26,18 +25,18 @@ public class DriveWithJoysticks extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-  this.isDeadzone = true;
+  //this.isDeadzone = true;
   }
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    if (this.isDeadzone) {
+    /*if (this.isDeadzone) {
       drive.setRightSpeedWithDeadzone(-xboxController.getRightY());
       drive.setLeftSpeedWithDeadzone(-xboxController.getLeftY());
     } else {
       drive.setLeftSpeed(-xboxController.getLeftY());
       drive.setRightSpeed(-xboxController.getRightY());
-    }
+    }*/
   }
   // Called once the command ends or is interrupted.
   @Override

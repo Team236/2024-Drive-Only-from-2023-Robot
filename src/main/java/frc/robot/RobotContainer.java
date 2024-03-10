@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.button.POVButton;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.ControllerConstants;
 
-import frc.robot.commands.Drive.DoubleArcadeDrive;
+import frc.robot.commands.Drive.ArcadeDrive;
 
 
 import frc.robot.subsystems.Drive;
@@ -33,7 +33,7 @@ public class RobotContainer {
   private final Drive drive = new Drive();
 
   //DRIVE
- private final DoubleArcadeDrive doubleArcadeDrive = new DoubleArcadeDrive(drive, driveController);
+ private final ArcadeDrive doubleArcadeDrive = new ArcadeDrive(drive, driveController,drive.diffDrive);
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
   drive.setDefaultCommand(doubleArcadeDrive);

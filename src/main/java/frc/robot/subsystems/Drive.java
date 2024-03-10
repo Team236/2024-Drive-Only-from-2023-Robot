@@ -20,8 +20,9 @@ import frc.robot.Constants.DriveConstants;
 
 public class Drive extends SubsystemBase {
   public CANSparkMax leftFront, leftRear, rightFront, rightRear;
+  public DifferentialDrive diffDrive;
   private XboxController xboxController;
-  private boolean isDeadzone;
+  //private boolean isDeadzone;
  
 
   /** Creates a new ExampleSubsystem. */
@@ -40,6 +41,10 @@ public class Drive extends SubsystemBase {
     leftRear.follow(leftFront);
     rightRear.follow(rightFront);
 
+    diffDrive = new DifferentialDrive(leftFront, rightFront); 
+    diffDrive.setSafetyEnabled(false);
+    diffDrive.setDeadband(Constants.DriveConstants.DEADBAND);
+
     leftFront.setSmartCurrentLimit(40);
     rightFront.setSmartCurrentLimit(40);
     leftRear.setSmartCurrentLimit(40);
@@ -48,7 +53,7 @@ public class Drive extends SubsystemBase {
 
    xboxController = new XboxController(Constants.ControllerConstants.USB_DRIVECONTROLLER);
  
-  isDeadzone = Constants.DriveConstants.IS_DEADZONE;
+  //isDeadzone = Constants.DriveConstants.IS_DEADZONE;
   }
   
 

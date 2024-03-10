@@ -97,8 +97,8 @@ public final class Constants {
 }
   public static class MotorControllers {
     public static final int ID_LEFT_FRONT = 35; 
-    public static final int ID_RIGHT_FRONT = 1; 
-    public static final int ID_LEFT_REAR = 34;
+    public static final int ID_RIGHT_FRONT = 59; 
+    public static final int ID_LEFT_REAR = 58;
     public static final int ID_RIGHT_REAR = 32;
     }
 
@@ -106,7 +106,8 @@ public final class Constants {
 public static class DriveConstants {
   public static final double LEFT_DEADZONE = 0.17; //0.15???
   public static final double RIGHT_DEADZONE = 0.17;
-  public static final boolean IS_DEADZONE = true;
+  public static final double DEADBAND = 0.17;
+  //public static final boolean IS_DEADZONE = true;
 }
 
 }
