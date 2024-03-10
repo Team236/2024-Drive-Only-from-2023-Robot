@@ -5,16 +5,12 @@
 package frc.robot.subsystems;
 
 
-import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
+import com.revrobotics.CANSparkMax;
 
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
-import frc.robot.Constants.MotorControllers;
 import frc.robot.Constants.DriveConstants;
 
 
@@ -34,8 +30,8 @@ public class Drive extends SubsystemBase {
     leftFront.restoreFactoryDefaults();
     rightFront.restoreFactoryDefaults();
 
-    leftFront.setInverted(false); //testbed = true, 2022 = false
-    rightFront.setInverted(true); // testbed = false, 2022 = true
+    leftFront.setInverted(true); //testbed = true, 
+    rightFront.setInverted(false); // testbed = false, 
 
     leftRear.follow(leftFront);
     rightRear.follow(rightFront);
