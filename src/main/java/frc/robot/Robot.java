@@ -21,9 +21,9 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  */
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
-  private Compressor compressor;
-  public AHRS navx = new AHRS();
-  public UsbCamera usbCamera0;
+  // private Compressor compressor;
+  // public AHRS navx = new AHRS();
+  // public UsbCamera usbCamera0;
   //public PhotonCamera camera;  Done in Container.
   private RobotContainer m_robotContainer;
   /**
@@ -35,8 +35,8 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
-    compressor = new Compressor(PneumaticsModuleType.CTREPCM);
-    compressor.enableDigital();
+    // compressor = new Compressor(PneumaticsModuleType.CTREPCM);
+    // compressor.enableDigital();
     
     //USB camera
 		/*try {
